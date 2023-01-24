@@ -50,7 +50,8 @@ public class ListenersImplentationClass implements ITestListener {
 
 		String screenshotName = methodName + "-" + jUtil.getSystemDateInFormat();
 		try {
-			String path = wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
+			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
+			String path = "/job/WCSM23-SmokeSuite/ws/Screenshot/"+screenshotName+".png";
 			System.out.println(path);
 			test.fail(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 			//test.addScreenCaptureFromPath(path);
