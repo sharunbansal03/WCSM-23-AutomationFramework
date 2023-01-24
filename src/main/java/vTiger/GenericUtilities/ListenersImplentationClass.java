@@ -80,7 +80,7 @@ public class ListenersImplentationClass implements ITestListener {
 				".\\ExtentReports\\Report-" + new JavaUtility().getSystemDateInFormat() + ".html");
 		htmlReport.config().setDocumentTitle("VTiger Execution Report");
 		htmlReport.config().setReportName("VTiger Suite Execution");
-		htmlReport.config().setTheme(Theme.DARK);
+		htmlReport.config().setTheme(Theme.STANDARD);
 
 		report = new ExtentReports();
 		report.attachReporter(htmlReport);
