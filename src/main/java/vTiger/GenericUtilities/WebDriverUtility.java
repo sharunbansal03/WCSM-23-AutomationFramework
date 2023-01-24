@@ -280,7 +280,8 @@ public class WebDriverUtility {
 	public String takeScreenshot(WebDriver driver, String screenshotsName) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dst = new File(".\\Screenshots\\" + screenshotsName + ".png");
+		String destinationPath = System.getProperty("user.dir") + "\\Screenshot\\"+screenshotsName+".png";
+		File dst = new File(destinationPath);
 		FileUtils.copyFile(src, dst); // from commons io dependency
 
 		return dst.getAbsolutePath(); // to attach screenshot to extent report
