@@ -52,7 +52,7 @@ public class ListenersImplentationClass implements ITestListener {
 		try {
 			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
 			//String path = System.getProperty("user.dir") + "\\Screenshot\\"+screenshotName+".png";
-			
+			System.out.println("sys dir" +System.getProperty("user.dir"));
 			int indexOfScreenshot = System.getProperty("user.dir").indexOf("Screenshot");
 			System.out.println("index of Screenshot: "+indexOfScreenshot);
 			
