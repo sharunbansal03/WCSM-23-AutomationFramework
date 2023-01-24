@@ -53,10 +53,11 @@ public class ListenersImplentationClass implements ITestListener {
 			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
 			// String path = System.getProperty("user.dir") + "\\Screenshot\\" +
 			// screenshotName + ".png";
+			System.out.println();
 			String jobName = System.getProperty("user.dir").substring(42,
-					System.getProperty("user.dir").indexOf("Screenshot") - 1);
+					System.getProperty("user.dir").indexOf("Screenshot"));
 			System.out.println(System.getProperty("user.dir").substring(42,
-					System.getProperty("user.dir").indexOf("Screenshot") - 1));
+					System.getProperty("user.dir").indexOf("Screenshot")));
 			String path = "job/" + jobName + "/ws/Screenshot/" + screenshotName + ".png";
 			System.out.println(path);
 			test.fail(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
