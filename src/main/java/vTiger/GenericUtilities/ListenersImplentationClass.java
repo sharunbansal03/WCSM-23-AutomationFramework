@@ -54,9 +54,11 @@ public class ListenersImplentationClass implements ITestListener {
 			// String path = System.getProperty("user.dir") +
 			// "\\Screenshot\\"+screenshotName+".png";
 			System.out.println("sys dir" + System.getProperty("user.dir"));
+			System.out.println(System.getProperty("user.dir").lastIndexOf("\\"));
+			System.out.println(System.getProperty("user.dir").lastIndexOf("\""));
 
-			String jobName = System.getProperty("user.dir").substring(System.getProperty("user.dir").lastIndexOf("\""));
-			System.out.println(jobName);
+			String jobName = System.getProperty("user.dir").substring(System.getProperty("user.dir").lastIndexOf("\\"));
+			System.out.println("job name"+ jobName);
 			String path = "/job/" + jobName + "/ws/Screenshot/" + screenshotName + ".png";
 			
 			System.out.println(path);
