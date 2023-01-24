@@ -53,7 +53,8 @@ public class ListenersImplentationClass implements ITestListener {
 			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
 			String jenkinsJobName = System.getProperty("user.dir")
 					.substring(System.getProperty("user.dir").lastIndexOf("\\") + 1);
-			String jenkinsPathOfScreenshot = "/job/" + jenkinsJobName + "/ws/Screenshot/" + screenshotName + ".png";
+			String jenkinsPathOfScreenshot = "/job/" + jenkinsJobName + "/ws/Screenshots/" + screenshotName + ".png";
+			System.out.println(jenkinsPathOfScreenshot);
 			test.addScreenCaptureFromPath(jenkinsPathOfScreenshot);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
