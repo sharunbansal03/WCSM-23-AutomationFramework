@@ -11,6 +11,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import vTiger.ObjectRepository.HomePage;
@@ -43,11 +44,11 @@ public class BaseClass {
 	 * 
 	 * @throws IOException
 	 */
-	// @Parameters("browser")
+	@Parameters("browser")
 	// @BeforeTest
 	@BeforeClass(groups = { "SmokeSuite", "RegressionSuite" })
-	public void bcConfig(/* String BROWSER */) throws IOException {
-		String BROWSER = pUtil.readDataFromPropertyFile("browser");
+	public void bcConfig(String BROWSER) throws IOException {
+		//String BROWSER = pUtil.readDataFromPropertyFile("browser");
 		String URL = pUtil.readDataFromPropertyFile("url");
 
 		if (BROWSER.equalsIgnoreCase("chrome")) {
@@ -102,7 +103,7 @@ public class BaseClass {
 	 */
 	@AfterClass(groups = { "SmokeSuite", "RegressionSuite" }, alwaysRun=true)
 	public void acConfig() {
-		driver.quit();
+	//	driver.quit();
 		System.out.println("==== browser Closed =====");
 	}
 
