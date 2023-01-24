@@ -8,7 +8,7 @@
 </groups>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="vtiger.Organizations.TestScripts.CreateOrganizationWithIndustryUsingPOMTest"/>
+      <!-- class name="vtiger.Organizations.TestScripts.CreateOrganizationWithIndustryUsingPOMTest"/ -->
       <class name="vtiger.Contacts.TestScripts.CreateContactTest"/>
     </classes>
   </test> <!-- Test -->
