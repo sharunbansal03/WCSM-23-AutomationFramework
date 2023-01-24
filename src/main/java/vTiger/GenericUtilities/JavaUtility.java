@@ -21,7 +21,7 @@ public class JavaUtility {
 	 */
 	public int getRandomNumber() {
 		Random r = new Random();
-		int value = r.nextInt(1000);
+		int value = r.nextInt(9999);
 		return value;
 	}
 

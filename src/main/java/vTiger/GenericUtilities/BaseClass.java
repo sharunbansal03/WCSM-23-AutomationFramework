@@ -53,7 +53,6 @@ public class BaseClass {
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
-			//System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver.exe");
 			driver = new ChromeDriver();
 			sdriver = driver;
 			System.out.println("====" + BROWSER + " Launch successful=====");
