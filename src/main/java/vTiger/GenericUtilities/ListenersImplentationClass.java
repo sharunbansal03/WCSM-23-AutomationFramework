@@ -50,6 +50,7 @@ public class ListenersImplentationClass implements ITestListener {
 		String screenshotName = methodName + "-" + jUtil.getSystemDateInFormat();
 		try {
 			String path = wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
+			System.out.println(path);
 			test.addScreenCaptureFromPath(path);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
