@@ -51,18 +51,18 @@ public class ListenersImplentationClass implements ITestListener {
 		String screenshotName = methodName + "-" + jUtil.getSystemDateInFormat();
 		try {
 			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
-			//String path = System.getProperty("user.dir") + "\\Screenshot\\"+screenshotName+".png";
-			System.out.println("sys dir" +System.getProperty("user.dir"));
-			int indexOfScreenshot = System.getProperty("user.dir").indexOf("Screenshot");
-			System.out.println("index of Screenshot: "+indexOfScreenshot);
-			
-			int indexOfWorkSpace =  System.getProperty("user.dir").indexOf("workspace");
-			System.out.println("index of workspace: "+indexOfWorkSpace);
-			String jobName = System.getProperty("user.dir").substring(indexOfWorkSpace+10,indexOfScreenshot-1);
+			// String path = System.getProperty("user.dir") +
+			// "\\Screenshot\\"+screenshotName+".png";
+			System.out.println("sys dir" + System.getProperty("user.dir"));
+
+			int indexOfWorkSpace = System.getProperty("user.dir").indexOf("workspace");
+			System.out.println("index of workspace: " + indexOfWorkSpace);
+
+			String jobName = System.getProperty("user.dir").substring(indexOfWorkSpace + 10);
 			System.out.println(jobName);
 			String path = "job/" + jobName + "/ws/Screenshot/" + screenshotName + ".png";
 			test.fail(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-			//test.addScreenCaptureFromPath(path);
+			// test.addScreenCaptureFromPath(path);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
