@@ -1,8 +1,7 @@
 package vtiger.Organizations.TestScripts;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,9 +12,9 @@ import vTiger.ObjectRepository.OrganizationInfoPage;
 import vTiger.ObjectRepository.OrganizationsPage;
 
 @Listeners(vTiger.GenericUtilities.ListenersImplentationClass.class)
-public class CreateOrganizationWithIndustryTest extends BaseClass{
+public class CreateOrganizationWithIndustryTest extends BaseClass {
 
-	@Test
+	@Test(groups = "RegressionSuite")
 	public void createOrgWithIndustryTest() throws IOException {
 		// Step 1: Create objects of all required libraries
 		/*
@@ -66,18 +65,11 @@ public class CreateOrganizationWithIndustryTest extends BaseClass{
 
 		// Step 8: Validate
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
-	
-		if (oip.getOrganizationHeader().contains(ORGNAME)
-				&& oip.getIndustryName().equals(INDUSTRY)) {
-			System.out.println("[Assertion Pass]: Organization created with details: ");
-			System.out.println("Organization name: " + ORGNAME);
-			System.out.println("Industry name: " + INDUSTRY);
-		} else {
-			System.out.println("[Assertion Failed]: Organization creation failed. Actual details in application: ");
-			System.out
-					.println("Organization name: " + driver.findElement(By.id("dtlview_Organization Name")).getText());
-			System.out.println("Industry name: " + driver.findElement(By.id("dtlview_Industry")).getText());
-		}
 
+		Assert.assertTrue(oip.getOrganizationHeader().contains(ORGNAME) && oip.getIndustryName().equals(INDUSTRY),
+				"[ASSERTION FAILED]: failed");
+		System.out.println("[Assertion Pass]: Organization created with details: ");
+		System.out.println("Organization name: " + ORGNAME);
+		System.out.println("Industry name: " + INDUSTRY);
 	}
 }
