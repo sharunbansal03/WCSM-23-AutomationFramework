@@ -101,7 +101,7 @@ public class BaseClass {
 	/**
 	 * Close the browser after every class
 	 */
-	@AfterClass(groups = { "SmokeSuite", "RegressionSuite" })
+	@AfterClass(groups = { "SmokeSuite", "RegressionSuite" }, alwaysRun=true)
 	public void acConfig() {
 		driver.quit();
 		System.out.println("==== browser Closed =====");
