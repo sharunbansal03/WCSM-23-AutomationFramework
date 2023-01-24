@@ -280,7 +280,7 @@ public class WebDriverUtility {
 	public String takeScreenshot(WebDriver driver, String screenshotsName) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		String destinationPath = System.getProperty("user.dir") + "\\Screenshot\\"+screenshotsName+".png";
+		String destinationPath = ".\\Screenshots\\"+screenshotsName+".png";
 		File dst = new File(destinationPath);
 		FileUtils.copyFile(src, dst); // from commons io dependency
 

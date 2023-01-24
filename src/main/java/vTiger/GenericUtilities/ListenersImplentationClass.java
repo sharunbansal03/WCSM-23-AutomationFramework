@@ -51,19 +51,10 @@ public class ListenersImplentationClass implements ITestListener {
 		String screenshotName = methodName + "-" + jUtil.getSystemDateInFormat();
 		try {
 			wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
-			// String path = System.getProperty("user.dir") +
-			// "\\Screenshot\\"+screenshotName+".png";
-			System.out.println("sys dir" + System.getProperty("user.dir"));
-			System.out.println(System.getProperty("user.dir").lastIndexOf("\\"));
-
-			String jobName = System.getProperty("user.dir")
+			String jenkinsJobName = System.getProperty("user.dir")
 					.substring(System.getProperty("user.dir").lastIndexOf("\\") + 1);
-			System.out.println("job name" + jobName);
-			String path = "/job/" + jobName + "/ws/Screenshot/" + screenshotName + ".png";
-
-			System.out.println(path);
-			//test.fail(MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-			test.addScreenCaptureFromPath(path);
+			String jenkinsPathOfScreenshot = "/job/" + jenkinsJobName + "/ws/Screenshot/" + screenshotName + ".png";
+			test.addScreenCaptureFromPath(jenkinsPathOfScreenshot);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
