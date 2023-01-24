@@ -3,10 +3,14 @@ package vtiger.Organizations.TestScripts;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import vTiger.GenericUtilities.BaseClass;
+import vTiger.ObjectRepository.CreateNewOrganizationPage;
+import vTiger.ObjectRepository.HomePage;
+import vTiger.ObjectRepository.OrganizationInfoPage;
+import vTiger.ObjectRepository.OrganizationsPage;
 
 @Listeners(vTiger.GenericUtilities.ListenersImplentationClass.class)
 public class CreateOrganizationWithIndustryTest extends BaseClass{
@@ -49,24 +53,22 @@ public class CreateOrganizationWithIndustryTest extends BaseClass{
 		 */
 
 		// Step 5: Click on Organizations link
-		driver.findElement(By.linkText("Organizations")).click();
+		HomePage hp = new HomePage(driver);
+		hp.clickOnOrganizationsLink();
 
 		// Step 6: Click on Create Organization look up image
-		driver.findElement(By.xpath("//img[@alt='Create Organization...']")).click();
+		OrganizationsPage op = new OrganizationsPage(driver);
+		op.clickOnCreateOrganizationLookUpImage();
 
 		// Step 7: Create Organization With Mandatory fields
-		driver.findElement(By.name("accountname")).sendKeys(ORGNAME);
+		CreateNewOrganizationPage cnop = new CreateNewOrganizationPage(driver);
+		cnop.createNewOrganization(ORGNAME, INDUSTRY);
 
-		// Step 8: Select "Healthcare" from Industry dropdown
-		WebElement dropdownElement = driver.findElement(By.name("industry"));
-		wUtil.handleDropDown(dropdownElement, INDUSTRY);
-
-		// Step 9: Save
-		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
-
-		// Step 10: Validate
-		if (driver.findElement(By.className("dvHeaderText")).getText().contains(ORGNAME)
-				&& driver.findElement(By.id("dtlview_Industry")).getText().equals(INDUSTRY)) {
+		// Step 8: Validate
+		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
+	
+		if (oip.getOrganizationHeader().contains(ORGNAME)
+				&& oip.getIndustryName().equals(INDUSTRY)) {
 			System.out.println("[Assertion Pass]: Organization created with details: ");
 			System.out.println("Organization name: " + ORGNAME);
 			System.out.println("Industry name: " + INDUSTRY);

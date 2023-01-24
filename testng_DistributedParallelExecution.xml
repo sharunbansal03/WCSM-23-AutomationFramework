@@ -13,8 +13,7 @@
 	
 	<test thread-count="2" parallel="tests" name="Test-Runner-2">
 		<classes>
-			<class
-				name="vtiger.Organizations.TestScripts.CreateOrganizationWithDDTAndGUTest" />
+			  <class name="vtiger.Organizations.TestScripts.CreateOrganizationWithIndustryTest"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
