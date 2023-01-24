@@ -17,7 +17,7 @@ import vTiger.ObjectRepository.HomePage;
 @Listeners(vTiger.GenericUtilities.ListenersImplentationClass.class)
 public class CreateContactTest extends BaseClass {
 
-	@Test(groups = "RegressionSuite")
+	@Test(groups = {"SmokeSuite","RegressionSuite"})
 	public void createContactTest() throws EncryptedDocumentException, IOException {
 		// Step 1: Read all the required data
 		String LASTNAME = eUtil.readDataFromExcelSheet("Contacts", 1, 2);
