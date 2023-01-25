@@ -11,7 +11,7 @@
       <![CDATA[Step: Created new Contact with last name: Chaitra]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-01-24T23:01:14 IST" name="Default suite" finished-at="2023-01-24T23:01:52 IST" duration-ms="37653">
+  <suite started-at="2023-01-25T10:14:39 IST" name="Default suite" finished-at="2023-01-25T10:15:12 IST" duration-ms="33253">
     <groups>
       <group name="RegressionSuite">
         <method signature="CreateContactTest.createContactTest()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" name="createContactTest" class="vtiger.Contacts.TestScripts.CreateContactTest"/>
@@ -20,27 +20,27 @@
         <method signature="CreateContactTest.createContactTest()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" name="createContactTest" class="vtiger.Contacts.TestScripts.CreateContactTest"/>
       </group> <!-- SmokeSuite -->
     </groups>
-    <test started-at="2023-01-24T23:01:14 IST" name="Default test" finished-at="2023-01-24T23:01:52 IST" duration-ms="37653">
+    <test started-at="2023-01-25T10:14:39 IST" name="Default test" finished-at="2023-01-25T10:15:12 IST" duration-ms="33253">
       <class name="vtiger.Contacts.TestScripts.CreateContactTest">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:14 IST" name="bsConfig" finished-at="2023-01-24T23:01:14 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:14:39 IST" name="bsConfig" finished-at="2023-01-25T10:14:39 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:15 IST" name="bcConfig" finished-at="2023-01-24T23:01:30 IST" duration-ms="14765" status="PASS">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:14:39 IST" name="bcConfig" finished-at="2023-01-25T10:14:48 IST" duration-ms="9102" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:30 IST" name="bmConfig" finished-at="2023-01-24T23:01:33 IST" duration-ms="3643" status="PASS">
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:14:49 IST" name="bmConfig" finished-at="2023-01-25T10:14:53 IST" duration-ms="4211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bmConfig -->
-        <test-method signature="createContactTest()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:33 IST" name="createContactTest" finished-at="2023-01-24T23:01:49 IST" duration-ms="15542" status="FAIL">
+        <test-method signature="createContactTest()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:14:53 IST" name="createContactTest" finished-at="2023-01-25T10:15:09 IST" duration-ms="16370" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[[Assertion Failed]: Contact creation failed. Actual details in application: [ CON68 ] Chaitra - Contact Information expected [true] but found [false]]]>
+              <![CDATA[[Assertion Failed]: Contact creation failed. Actual details in application: [ CON73 ] Chaitra - Contact Information expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: [Assertion Failed]: Contact creation failed. Actual details in application: [ CON68 ] Chaitra - Contact Information expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: [Assertion Failed]: Contact creation failed. Actual details in application: [ CON73 ] Chaitra - Contact Information expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:968)
 at org.testng.Assert.assertTrue(Assert.java:43)
@@ -88,15 +88,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- createContactTest -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:49 IST" name="amConfig" finished-at="2023-01-24T23:01:51 IST" duration-ms="2151" status="PASS">
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:15:10 IST" name="amConfig" finished-at="2023-01-25T10:15:12 IST" duration-ms="1661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:51 IST" name="acConfig" finished-at="2023-01-24T23:01:52 IST" duration-ms="678" status="PASS">
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:15:12 IST" name="acConfig" finished-at="2023-01-25T10:15:12 IST" duration-ms="400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-24T23:01:53 IST" name="asConfig" finished-at="2023-01-24T23:01:53 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.Contacts.TestScripts.CreateContactTest@61df66b6]" started-at="2023-01-25T10:15:15 IST" name="asConfig" finished-at="2023-01-25T10:15:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfig -->
