@@ -42,7 +42,7 @@ public class CreateProductWithVendor {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else
-			System.out.println("Invalid browser");
+			System.out.println("Invalid browser detected");
 
 		wUtil.maximizeWindow(driver);
 		wUtil.waitForPageLoad(driver);
