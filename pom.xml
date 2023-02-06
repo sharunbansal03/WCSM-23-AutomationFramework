@@ -54,13 +54,20 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.0.9</version>
 		</dependency>
-		
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
- <groupId>org.projectlombok</groupId> 
-<artifactId>lombok</artifactId> 
-<version>1.18.24</version> 
-<scope>provided</scope> 
-</dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -83,7 +90,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>Regression</id>
 			<build>
@@ -101,7 +108,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>Read</id>
 			<build>
@@ -119,7 +126,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>Fail</id>
 			<build>
@@ -137,7 +144,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>ParallelTest</id>
 			<build>
@@ -155,7 +162,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>CrossBrowserTest</id>
 			<build>
@@ -173,7 +180,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 	</profiles>
 
 
